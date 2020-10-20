@@ -47,6 +47,13 @@ regressor.add(LSTM(units = 50, return_sequences = True, input_shape = (X_train.s
 regressor.add(Dropout(0.2))
 
 
+# Adding a second LSTM layer and some Dropout regularisation
+regressor.add(LSTM(units = 50, return_sequences = True))
+regressor.add(Dropout(0.2))
+
+# Adding a third LSTM layer and some Dropout regularisation
+regressor.add(LSTM(units = 50, return_sequences = True))
+regressor.add(Dropout(0.2))
 
 # Adding a fourth LSTM layer and some Dropout regularisation
 regressor.add(LSTM(units = 50))
